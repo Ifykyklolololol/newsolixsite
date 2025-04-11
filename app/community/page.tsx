@@ -4,30 +4,33 @@ export default function CommunityPage() {
   return (
     <div className="py-12">
       <div className="container-custom">
-        <h1 className="section-title text-center">Community</h1>
-        <p className="text-center text-gray-600 mb-10 max-w-2xl mx-auto">
+        <h1 className="section-title text-center gradient-text animate-slide-up">Community</h1>
+        <p
+          className="text-center text-gray-600 mb-10 max-w-2xl mx-auto animate-slide-up"
+          style={{ animationDelay: "0.1s" }}
+        >
           Join our community to get support, request scripts, and stay updated with the latest releases.
         </p>
 
         {/* Discord Section */}
-        <div className="card p-8 mb-12">
+        <div className="card p-8 mb-12 animate-fade-in" style={{ animationDelay: "0.2s" }}>
           <div className="flex flex-col md:flex-row items-center gap-8">
             <div className="w-full md:w-1/2">
-              <h2 className="text-2xl font-bold mb-4">Join Our Discord</h2>
+              <h2 className="text-2xl font-bold mb-4 gradient-text">Join Our Discord</h2>
               <p className="text-gray-600 mb-6">
                 Join our Discord server to get support, request scripts, and stay updated with the latest releases. Our
                 community is active and friendly!
               </p>
               <Link
-                href="https://discord.gg/solixhub"
+                href="https://discord.gg/rSZJGSr5FW"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-primary glow-effect"
+                className="btn-primary glow-effect hover-scale"
               >
                 Join Discord
               </Link>
             </div>
-            <div className="w-full md:w-1/2 bg-gray-100 rounded-xl p-6 h-64 flex items-center justify-center">
+            <div className="w-full md:w-1/2 bg-gray-100 rounded-xl p-6 h-64 flex items-center justify-center animate-float">
               <div className="text-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -37,18 +40,18 @@ export default function CommunityPage() {
                 >
                   <path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z" />
                 </svg>
-                <p className="text-gray-700 font-medium">discord.gg/solixhub</p>
+                <p className="text-gray-700 font-medium">discord.gg/rSZJGSr5FW</p>
               </div>
             </div>
           </div>
         </div>
 
         {/* Key System Section */}
-        <div className="card p-8 mb-12">
-          <h2 className="text-2xl font-bold mb-6 text-center">Our Free Key System</h2>
+        <div className="card p-8 mb-12 animate-fade-in" style={{ animationDelay: "0.3s" }}>
+          <h2 className="text-2xl font-bold mb-6 text-center gradient-text">Our Free Key System</h2>
           <div className="flex flex-col md:flex-row gap-8">
             <div className="w-full md:w-1/2">
-              <div className="bg-pink-50 p-6 rounded-xl">
+              <div className="bg-pink-50 p-6 rounded-xl hover-scale">
                 <h3 className="text-xl font-semibold mb-4">How It Works</h3>
                 <ol className="list-decimal list-inside space-y-3 text-gray-700">
                   <li>Copy our script from the website</li>
@@ -98,12 +101,53 @@ export default function CommunityPage() {
           </div>
         </div>
 
+        {/* Premium Key Option Section */}
+        <div className="card p-8 mb-12 animate-fade-in" style={{ animationDelay: "0.4s" }}>
+          <h2 className="text-2xl font-bold mb-6 text-center gradient-text">Premium Key Option</h2>
+          <div className="flex flex-col md:flex-row gap-8">
+            <div className="w-full md:w-1/2">
+              <h3 className="text-xl font-semibold mb-4">Skip the Key System</h3>
+              <p className="text-gray-600 mb-4">
+                Don't want to go through the key system? We offer premium keys that allow you to bypass the key system
+                entirely.
+              </p>
+              <p className="text-gray-600 mb-4">
+                Our premium keys provide longer durations and instant access to all our scripts without having to
+                complete any verification steps.
+              </p>
+              <div className="mt-6">
+                <a
+                  href="https://solixhub.sellsn.io/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-primary glow-effect hover-scale"
+                >
+                  Purchase Premium Keys
+                </a>
+              </div>
+            </div>
+            <div className="w-full md:w-1/2">
+              <div className="bg-pink-50 p-6 rounded-xl hover-scale">
+                <h3 className="text-xl font-semibold mb-4">Premium Key Benefits</h3>
+                <ul className="list-disc list-inside space-y-2 text-gray-700">
+                  <li>Instant access to all scripts</li>
+                  <li>No need to complete verification steps</li>
+                  <li>Longer key duration (up to permanent)</li>
+                  <li>Support the development of SolixHub</li>
+                  <li>Priority support on our Discord</li>
+                  <li>Access to exclusive features</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* FAQ Section */}
-        <div className="mb-12">
-          <h2 className="text-2xl font-bold mb-6 text-center">Frequently Asked Questions</h2>
+        <div className="mb-12 animate-fade-in" style={{ animationDelay: "0.5s" }}>
+          <h2 className="text-2xl font-bold mb-6 text-center gradient-text">Frequently Asked Questions</h2>
           <div className="space-y-4 max-w-3xl mx-auto">
             {faqs.map((faq, index) => (
-              <div key={index} className="card p-6">
+              <div key={index} className="card p-6 hover-scale">
                 <h3 className="text-lg font-semibold mb-2">{faq.question}</h3>
                 <p className="text-gray-600">{faq.answer}</p>
               </div>
@@ -112,8 +156,8 @@ export default function CommunityPage() {
         </div>
 
         {/* Contact Form */}
-        <div className="card p-8 max-w-3xl mx-auto">
-          <h2 className="text-2xl font-bold mb-6 text-center">Contact Us</h2>
+        <div className="card p-8 max-w-3xl mx-auto animate-fade-in" style={{ animationDelay: "0.6s" }}>
+          <h2 className="text-2xl font-bold mb-6 text-center gradient-text">Contact Us</h2>
           <form className="space-y-4">
             <div>
               <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
@@ -148,7 +192,7 @@ export default function CommunityPage() {
                 placeholder="Your message"
               ></textarea>
             </div>
-            <button type="submit" className="btn-primary glow-effect w-full">
+            <button type="submit" className="btn-primary glow-effect hover-scale w-full">
               Send Message
             </button>
           </form>

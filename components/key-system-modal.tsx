@@ -24,10 +24,10 @@ export default function KeySystemModal({ isOpen, onClose, onSelect }: KeySystemM
   if (!isOpen) return null
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black bg-opacity-50">
-      <div className="bg-white rounded-xl shadow-xl w-full max-w-md">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black bg-opacity-50 animate-fade-in">
+      <div className="bg-white rounded-xl shadow-xl w-full max-w-md animate-slide-up">
         <div className="flex items-center justify-between p-4 border-b border-pink-100">
-          <h3 className="text-xl font-bold">Choose Key System</h3>
+          <h3 className="text-xl font-bold gradient-text">Choose Key System</h3>
           <button onClick={onClose} className="text-gray-500 hover:text-gray-700 focus:outline-none">
             <X className="h-6 w-6" />
           </button>
@@ -40,15 +40,30 @@ export default function KeySystemModal({ isOpen, onClose, onSelect }: KeySystemM
             <button
               key={system.name}
               onClick={() => onSelect(system.url)}
-              className="w-full text-left p-4 border border-pink-200 rounded-lg hover:border-pink-300 hover:bg-pink-50 transition-colors"
+              className="w-full text-left p-4 border border-pink-200 rounded-lg hover:border-pink-300 hover:bg-pink-50 transition-colors hover-scale"
             >
               <h4 className="font-semibold text-lg">{system.name}</h4>
               <p className="text-gray-600 text-sm">{system.description}</p>
             </button>
           ))}
+
+          <div className="mt-6 pt-4 border-t border-pink-100">
+            <p className="text-gray-700 font-medium mb-2">Want to skip the key system?</p>
+            <p className="text-gray-600 text-sm mb-3">
+              Purchase a premium key for instant access without verification steps.
+            </p>
+            <a
+              href="https://solixhub.sellsn.io/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block w-full text-center p-3 bg-gradient-to-r from-pink-400 to-pink-500 text-white rounded-lg hover:from-pink-500 hover:to-pink-600 transition-colors hover-scale"
+            >
+              Get Premium Key
+            </a>
+          </div>
         </div>
         <div className="p-4 border-t border-pink-100">
-          <button onClick={onClose} className="w-full btn-secondary">
+          <button onClick={onClose} className="w-full btn-secondary hover-scale">
             Cancel
           </button>
         </div>

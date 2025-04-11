@@ -44,7 +44,7 @@ export default function Footer() {
             <h4 className="font-semibold mb-4">Connect</h4>
             <div className="flex space-x-4">
               <Link
-                href="https://discord.gg/solixhub"
+                href="https://discord.gg/rSZJGSr5FW"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-600 hover:text-pink-500 transition-colors"

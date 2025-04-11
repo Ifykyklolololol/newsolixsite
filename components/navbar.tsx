@@ -29,7 +29,7 @@ export default function Navbar() {
               Community
             </Link>
             <Link
-              href="https://discord.gg/solixhub"
+              href="https://discord.gg/rSZJGSr5FW"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-secondary"
@@ -74,7 +74,7 @@ export default function Navbar() {
               Community
             </Link>
             <Link
-              href="https://discord.gg/solixhub"
+              href="https://discord.gg/rSZJGSr5FW"
               target="_blank"
               rel="noopener noreferrer"
               className="block btn-secondary inline-block"

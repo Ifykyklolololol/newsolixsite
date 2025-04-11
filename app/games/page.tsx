@@ -40,13 +40,16 @@ export default function GamesPage() {
   return (
     <div className="py-12">
       <div className="container-custom">
-        <h1 className="section-title text-center">All Games</h1>
-        <p className="text-center text-gray-600 mb-10 max-w-2xl mx-auto">
+        <h1 className="section-title text-center gradient-text animate-slide-up">All Games</h1>
+        <p
+          className="text-center text-gray-600 mb-10 max-w-2xl mx-auto animate-slide-up"
+          style={{ animationDelay: "0.1s" }}
+        >
           Browse our collection of free Luau scripts for popular Roblox games.
         </p>
 
         {/* Search */}
-        <div className="mb-8">
+        <div className="mb-8 animate-slide-up" style={{ animationDelay: "0.2s" }}>
           <div className="relative max-w-md mx-auto">
             <input
               type="text"
@@ -63,10 +66,15 @@ export default function GamesPage() {
 
         {/* Games Grid */}
         {currentGames.length > 0 ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            {currentGames.map((game) => (
-              <Link key={game.id} href={`/games/${game.id}`} className="card overflow-hidden">
-                <div className="relative h-40">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 stagger-animation">
+            {currentGames.map((game, index) => (
+              <Link
+                key={game.id}
+                href={`/games/${game.id}`}
+                className="card overflow-hidden animate-fade-in hover-scale"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className="relative h-40 shimmer">
                   <Image src={game.image || "/placeholder.svg"} alt={game.title} fill className="object-cover" />
                 </div>
                 <div className="p-4">
@@ -78,20 +86,20 @@ export default function GamesPage() {
             ))}
           </div>
         ) : (
-          <div className="text-center py-10">
+          <div className="text-center py-10 animate-fade-in">
             <p className="text-gray-600">No games found matching your search.</p>
           </div>
         )}
 
         {/* Pagination */}
         {filteredGames.length > gamesPerPage && (
-          <div className="flex justify-center mt-12">
+          <div className="flex justify-center mt-12 animate-fade-in" style={{ animationDelay: "0.5s" }}>
             <nav className="flex items-center space-x-2">
               <button
                 onClick={() => paginate(currentPage - 1)}
                 disabled={currentPage === 1}
                 className={`px-3 py-1 rounded border border-pink-200 text-gray-600 ${
-                  currentPage === 1 ? "opacity-50 cursor-not-allowed" : "hover:bg-pink-50"
+                  currentPage === 1 ? "opacity-50 cursor-not-allowed" : "hover:bg-pink-50 hover-scale"
                 }`}
               >
                 Previous
@@ -101,7 +109,7 @@ export default function GamesPage() {
                 <button
                   key={number}
                   onClick={() => paginate(number)}
-                  className={`px-3 py-1 rounded border ${
+                  className={`px-3 py-1 rounded border hover-scale ${
                     currentPage === number
                       ? "border-pink-300 bg-pink-100 text-gray-800"
                       : "border-pink-200 text-gray-600 hover:bg-pink-50"
@@ -115,7 +123,7 @@ export default function GamesPage() {
                 onClick={() => paginate(currentPage + 1)}
                 disabled={currentPage === totalPages}
                 className={`px-3 py-1 rounded border border-pink-200 text-gray-600 ${
-                  currentPage === totalPages ? "opacity-50 cursor-not-allowed" : "hover:bg-pink-50"
+                  currentPage === totalPages ? "opacity-50 cursor-not-allowed" : "hover:bg-pink-50 hover-scale"
                 }`}
               >
                 Next
@@ -130,87 +138,101 @@ export default function GamesPage() {
 
 const games = [
   {
-    id: "da-hood",
-    title: "Da Hood",
-    description: "Powerful scripts for Da Hood with aimlock, ESP, and more features.",
-    image: "/placeholder.svg?height=300&width=500",
-    tags: ["FPS", "Roleplay", "Combat"],
+    id: "dead-rails",
+    title: "Dead Rails",
+    description: "ESP, aimbot, and combat advantages for Dead Rails.",
+    image: "/images/dead-rails.png",
+    tags: ["FPS", "Shooter", "Combat"],
+  },
+  {
+    id: "rivals",
+    title: "Rivals",
+    description: "Combat advantages, auto-farm, and utility features for Rivals.",
+    image: "/images/rivals.png",
+    tags: ["Fighting", "Competitive", "PvP"],
   },
   {
     id: "blox-fruits",
     title: "Blox Fruits",
     description: "Auto-farm, teleport, and other useful features for Blox Fruits.",
-    image: "/placeholder.svg?height=300&width=500",
+    image: "/images/blox-fruits.png",
     tags: ["Adventure", "Fighting", "Grinding"],
-  },
-  {
-    id: "mm2",
-    title: "Murder Mystery 2",
-    description: "ESP, coin farm, and other advantages for MM2 gameplay.",
-    image: "/placeholder.svg?height=300&width=500",
-    tags: ["Mystery", "Horror", "Roleplay"],
-  },
-  {
-    id: "pet-simulator-x",
-    title: "Pet Simulator X",
-    description: "Auto-farm, auto-collect, and other scripts for Pet Simulator X.",
-    image: "/placeholder.svg?height=300&width=500",
-    tags: ["Simulator", "Pets", "Grinding"],
-  },
-  {
-    id: "arsenal",
-    title: "Arsenal",
-    description: "Aimbot, ESP, and other scripts to dominate in Arsenal.",
-    image: "/placeholder.svg?height=300&width=500",
-    tags: ["FPS", "Combat", "Competitive"],
-  },
-  {
-    id: "adopt-me",
-    title: "Adopt Me",
-    description: "Scripts for Adopt Me with various features and utilities.",
-    image: "/placeholder.svg?height=300&width=500",
-    tags: ["Roleplay", "Pets", "Trading"],
   },
   {
     id: "jailbreak",
     title: "Jailbreak",
     description: "Auto-rob, teleport, and other scripts for Jailbreak.",
-    image: "/placeholder.svg?height=300&width=500",
+    image: "/images/jailbreak.png",
     tags: ["Adventure", "Robbery", "Vehicles"],
   },
   {
-    id: "brookhaven",
-    title: "Brookhaven",
-    description: "Various utility scripts for Brookhaven RP.",
-    image: "/placeholder.svg?height=300&width=500",
-    tags: ["Roleplay", "Town", "Social"],
+    id: "arise-crossover",
+    title: "Arise Crossover",
+    description: "Auto-farm, combat enhancements, and utility features for Arise Crossover.",
+    image: "/images/arise-crossover.png",
+    tags: ["Anime", "Fighting", "Crossover"],
   },
   {
-    id: "phantom-forces",
-    title: "Phantom Forces",
-    description: "Aimbot, ESP, and other combat advantages for Phantom Forces.",
-    image: "/placeholder.svg?height=300&width=500",
-    tags: ["FPS", "Combat", "Military"],
+    id: "shindo-life",
+    title: "Shindo Life",
+    description: "Auto-farm, auto-quest, and powerful combat features for Shindo Life.",
+    image: "/images/shindo-life.png",
+    tags: ["Adventure", "Anime", "Grinding"],
   },
   {
-    id: "bee-swarm-simulator",
-    title: "Bee Swarm Simulator",
-    description: "Auto-farm, auto-collect, and other features for Bee Swarm Simulator.",
-    image: "/placeholder.svg?height=300&width=500",
-    tags: ["Simulator", "Grinding", "Bees"],
+    id: "fisch",
+    title: "Fisch",
+    description: "Auto-fishing, teleport, and other utility scripts for Fisch.",
+    image: "/images/fisch.png",
+    tags: ["Simulator", "Casual", "Grinding"],
   },
   {
-    id: "tower-of-hell",
-    title: "Tower of Hell",
-    description: "Scripts to help you climb and win in Tower of Hell.",
-    image: "/placeholder.svg?height=300&width=500",
-    tags: ["Obby", "Parkour", "Challenge"],
+    id: "jujutsu-infinite",
+    title: "Jujutsu Infinite",
+    description: "Auto-farm, combat enhancements, and ESP for Jujutsu Infinite.",
+    image: "/images/jujutsu-infinite.png",
+    tags: ["Anime", "Fighting", "Adventure"],
   },
   {
-    id: "islands",
-    title: "Islands",
-    description: "Auto-farm, auto-build, and other utilities for Islands.",
-    image: "/placeholder.svg?height=300&width=500",
-    tags: ["Survival", "Building", "Grinding"],
+    id: "demonfall",
+    title: "Demonfall",
+    description: "Powerful scripts for Demonfall with auto-farm, ESP, and combat enhancements.",
+    image: "/images/demonfall.png",
+    tags: ["Adventure", "Anime", "Combat"],
+  },
+  {
+    id: "counter-blox",
+    title: "Counter Blox",
+    description: "ESP, aimbot, and other combat advantages for Counter Blox.",
+    image: "/images/counter-blox.png",
+    tags: ["FPS", "Combat", "Competitive"],
+  },
+  {
+    id: "gpo",
+    title: "GPO",
+    description: "Grand Piece Online scripts with auto-farm, ESP, and combat features.",
+    image: "/images/grand-piece-online.png",
+    tags: ["Adventure", "Anime", "Fighting"],
+  },
+  {
+    id: "mm2",
+    title: "Murder Mystery 2",
+    description: "ESP, coin farm, and other advantages for MM2 gameplay.",
+    image: "/images/mm2.png",
+    tags: ["Mystery", "Horror", "Roleplay"],
+  },
+  {
+    id: "pet-simulator-99",
+    title: "Pet Simulator 99",
+    description: "Auto-farm, auto-collect, and other scripts for Pet Simulator 99.",
+    image: "/images/pet-sim-99.png",
+    tags: ["Simulator", "Pets", "Grinding"],
+  },
+  {
+    id: "anime-vanguard",
+    title: "Anime Vanguard",
+    description: "Auto-farm, auto-summon, and combat features for Anime Vanguard.",
+    image: "/images/anime-vanguard.png",
+    tags: ["Anime", "Tower Defense", "Grinding"],
   },
 ]
