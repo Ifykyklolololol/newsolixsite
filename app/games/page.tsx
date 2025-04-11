@@ -5,6 +5,9 @@ import Link from "next/link"
 import Image from "next/image"
 import { Search } from "lucide-react"
 
+// Import the shared game data
+import { games } from "@/lib/game-data"
+
 export default function GamesPage() {
   const [searchTerm, setSearchTerm] = useState("")
   const [currentPage, setCurrentPage] = useState(1)
@@ -80,7 +83,9 @@ export default function GamesPage() {
                 <div className="p-4">
                   <h3 className="text-lg font-semibold mb-2">{game.title}</h3>
                   <p className="text-gray-600 text-sm mb-4 line-clamp-2">{game.description}</p>
-                  <span className="text-pink-500 text-sm font-medium">View Scripts &rarr;</span>
+                  <span className="text-pink-500 text-sm font-medium flex items-center">
+                    View Scripts <span className="arrow-animate ml-1">&rarr;</span>
+                  </span>
                 </div>
               </Link>
             ))}
@@ -135,104 +140,3 @@ export default function GamesPage() {
     </div>
   )
 }
-
-const games = [
-  {
-    id: "dead-rails",
-    title: "Dead Rails",
-    description: "ESP, aimbot, and combat advantages for Dead Rails.",
-    image: "/images/dead-rails.png",
-    tags: ["FPS", "Shooter", "Combat"],
-  },
-  {
-    id: "rivals",
-    title: "Rivals",
-    description: "Combat advantages, auto-farm, and utility features for Rivals.",
-    image: "/images/rivals.png",
-    tags: ["Fighting", "Competitive", "PvP"],
-  },
-  {
-    id: "blox-fruits",
-    title: "Blox Fruits",
-    description: "Auto-farm, teleport, and other useful features for Blox Fruits.",
-    image: "/images/blox-fruits.png",
-    tags: ["Adventure", "Fighting", "Grinding"],
-  },
-  {
-    id: "jailbreak",
-    title: "Jailbreak",
-    description: "Auto-rob, teleport, and other scripts for Jailbreak.",
-    image: "/images/jailbreak.png",
-    tags: ["Adventure", "Robbery", "Vehicles"],
-  },
-  {
-    id: "arise-crossover",
-    title: "Arise Crossover",
-    description: "Auto-farm, combat enhancements, and utility features for Arise Crossover.",
-    image: "/images/arise-crossover.png",
-    tags: ["Anime", "Fighting", "Crossover"],
-  },
-  {
-    id: "shindo-life",
-    title: "Shindo Life",
-    description: "Auto-farm, auto-quest, and powerful combat features for Shindo Life.",
-    image: "/images/shindo-life.png",
-    tags: ["Adventure", "Anime", "Grinding"],
-  },
-  {
-    id: "fisch",
-    title: "Fisch",
-    description: "Auto-fishing, teleport, and other utility scripts for Fisch.",
-    image: "/images/fisch.png",
-    tags: ["Simulator", "Casual", "Grinding"],
-  },
-  {
-    id: "jujutsu-infinite",
-    title: "Jujutsu Infinite",
-    description: "Auto-farm, combat enhancements, and ESP for Jujutsu Infinite.",
-    image: "/images/jujutsu-infinite.png",
-    tags: ["Anime", "Fighting", "Adventure"],
-  },
-  {
-    id: "demonfall",
-    title: "Demonfall",
-    description: "Powerful scripts for Demonfall with auto-farm, ESP, and combat enhancements.",
-    image: "/images/demonfall.png",
-    tags: ["Adventure", "Anime", "Combat"],
-  },
-  {
-    id: "counter-blox",
-    title: "Counter Blox",
-    description: "ESP, aimbot, and other combat advantages for Counter Blox.",
-    image: "/images/counter-blox.png",
-    tags: ["FPS", "Combat", "Competitive"],
-  },
-  {
-    id: "gpo",
-    title: "GPO",
-    description: "Grand Piece Online scripts with auto-farm, ESP, and combat features.",
-    image: "/images/grand-piece-online.png",
-    tags: ["Adventure", "Anime", "Fighting"],
-  },
-  {
-    id: "mm2",
-    title: "Murder Mystery 2",
-    description: "ESP, coin farm, and other advantages for MM2 gameplay.",
-    image: "/images/mm2.png",
-    tags: ["Mystery", "Horror", "Roleplay"],
-  },
-  {
-    id: "pet-simulator-99",
-    title: "Pet Simulator 99",
-    description: "Auto-farm, auto-collect, and other scripts for Pet Simulator 99.",
-    image: "/images/pet-sim-99.png",
-    tags: ["Simulator", "Pets", "Grinding"],
-  },
-  {
-    id: "anime-vanguard",
-    title: "Anime Vanguard",
-    description: "Auto-farm, auto-summon, and combat features for Anime Vanguard.",
-    image: "/images/anime-vanguard.png",
-    tags: ["Anime", "Tower Defense", "Grinding"],
-  },
-]

@@ -20,14 +20,14 @@ export default function Home() {
             className="flex flex-col sm:flex-row justify-center gap-4 animate-slide-up"
             style={{ animationDelay: "0.2s" }}
           >
-            <Link href="/games" className="btn-primary glow-effect hover-scale">
+            <Link href="/games" className="btn-primary hover-scale">
               Browse Scripts
             </Link>
             <Link
               href="https://discord.gg/rSZJGSr5FW"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-secondary glow-effect hover-scale"
+              className="btn-secondary hover-scale"
             >
               Join Discord
             </Link>
@@ -40,15 +40,15 @@ export default function Home() {
         <div className="container-custom">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center stagger-animation">
             <div className="card p-6 animate-fade-in hover-scale">
-              <h3 className="text-4xl font-bold text-pink-500 mb-2 animate-pulse-glow">10,000+</h3>
+              <h3 className="text-4xl font-bold text-pink-500 mb-2">10,000+</h3>
               <p className="text-gray-600">Active Users</p>
             </div>
             <div className="card p-6 animate-fade-in hover-scale">
-              <h3 className="text-4xl font-bold text-pink-500 mb-2 animate-pulse-glow">3M+</h3>
+              <h3 className="text-4xl font-bold text-pink-500 mb-2">3M+</h3>
               <p className="text-gray-600">Monthly Executions</p>
             </div>
             <div className="card p-6 animate-fade-in hover-scale">
-              <h3 className="text-4xl font-bold text-pink-500 mb-2 animate-pulse-glow">14+</h3>
+              <h3 className="text-4xl font-bold text-pink-500 mb-2">14+</h3>
               <p className="text-gray-600">Supported Games</p>
             </div>
           </div>
@@ -141,7 +141,9 @@ export default function Home() {
                 <div className="p-4">
                   <h3 className="text-lg font-semibold mb-2">{game.title}</h3>
                   <p className="text-gray-600 text-sm mb-4">{game.description}</p>
-                  <span className="text-pink-500 text-sm font-medium">View Scripts &rarr;</span>
+                  <span className="text-pink-500 text-sm font-medium flex items-center">
+                    View Scripts <span className="arrow-animate ml-1">&rarr;</span>
+                  </span>
                 </div>
               </Link>
             ))}
@@ -244,14 +246,14 @@ export default function Home() {
               Join thousands of players using SolixHub scripts to enhance their Roblox experience.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Link href="/games" className="btn-primary glow-effect hover-scale">
+              <Link href="/games" className="btn-primary hover-scale">
                 Browse Scripts
               </Link>
               <Link
                 href="https://discord.gg/rSZJGSr5FW"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-secondary glow-effect hover-scale"
+                className="btn-secondary hover-scale"
               >
                 Join Discord
               </Link>
