@@ -10,9 +10,9 @@ export const games = [
     tags: ["Anime", "Fighting", "Crossover"],
     scripts: [
       {
-        id: "arise-crossover-premium",
-        name: "SolixHub Premium Arise Crossover",
-        description: "Our premium script for Arise Crossover with all features unlocked.",
+        id: "arise-crossover-script",
+        name: "SolixHub Arise Crossover",
+        description: "Our script for Arise Crossover with all features unlocked.",
         features: [
           "Autofarm Mobs",
           "Insta Dash + Other Cooldowns",
@@ -45,9 +45,9 @@ export const games = [
     tags: ["FPS", "Shooter", "Combat"],
     scripts: [
       {
-        id: "dead-rails-premium",
-        name: "SolixHub Premium Dead Rails",
-        description: "Our premium script for Dead Rails with all features unlocked.",
+        id: "dead-rails-script",
+        name: "SolixHub Dead Rails",
+        description: "Our script for Dead Rails with all features unlocked.",
         features: [
           "Auto Win (Will Do Everything And Collect Bond)",
           "Auto Bond",
@@ -80,9 +80,9 @@ export const games = [
     tags: ["Adventure", "Robbery", "Vehicles"],
     scripts: [
       {
-        id: "jailbreak-premium",
-        name: "SolixHub Premium Jailbreak",
-        description: "Our premium script for Jailbreak with all features unlocked.",
+        id: "jailbreak-script",
+        name: "SolixHub Jailbreak",
+        description: "Our script for Jailbreak with all features unlocked.",
         features: [
           "Auto Pop Tires (Very Funny Troll Stuff)",
           "Silent Aim",
@@ -120,9 +120,9 @@ export const games = [
     tags: ["Adventure", "Fighting", "Grinding"],
     scripts: [
       {
-        id: "blox-fruits-premium",
-        name: "SolixHub Premium Blox Fruits",
-        description: "Our premium script for Blox Fruits with all features unlocked.",
+        id: "blox-fruits-script",
+        name: "SolixHub Blox Fruits",
+        description: "Our script for Blox Fruits with all features unlocked.",
         features: [
           "Auto Level",
           "Auto Quest",
@@ -154,9 +154,9 @@ export const games = [
     tags: ["Mystery", "Horror", "Roleplay"],
     scripts: [
       {
-        id: "mm2-premium",
-        name: "SolixHub Premium MM2",
-        description: "Our premium script for Murder Mystery 2 with all features unlocked.",
+        id: "mm2-script",
+        name: "SolixHub MM2",
+        description: "Our script for Murder Mystery 2 with all features unlocked.",
         features: [
           "Auto Farm Coins",
           "Auto Farm Types (Instant, Tween, VoidInstant)",
@@ -196,9 +196,9 @@ export const games = [
     tags: ["Anime", "Tower Defense", "Grinding"],
     scripts: [
       {
-        id: "anime-vanguard-premium",
-        name: "SolixHub Premium Anime Vanguard",
-        description: "Our premium script for Anime Vanguard with all features unlocked.",
+        id: "anime-vanguard-script",
+        name: "SolixHub Anime Vanguard",
+        description: "Our script for Anime Vanguard with all features unlocked.",
         features: [
           "Macro Recorder",
           "Inf Summon (Not restricted to 10 Summons per time)",
@@ -233,9 +233,9 @@ export const games = [
     tags: ["Adventure", "Anime", "Grinding"],
     scripts: [
       {
-        id: "shindo-life-premium",
-        name: "SolixHub Premium Shindo Life",
-        description: "Our premium script for Shindo Life with all features unlocked.",
+        id: "shindo-life-script",
+        name: "SolixHub Shindo Life",
+        description: "Our script for Shindo Life with all features unlocked.",
         features: [
           "Auto Green Quest",
           "Auto Dungeon",
@@ -277,9 +277,9 @@ export const games = [
     tags: ["Fighting", "Competitive", "PvP"],
     scripts: [
       {
-        id: "rivals-premium",
-        name: "SolixHub Premium Rivals",
-        description: "Our premium script for Rivals with all features unlocked.",
+        id: "rivals-script",
+        name: "SolixHub Rivals",
+        description: "Our script for Rivals with all features unlocked.",
         features: [
           "Rage Bot (Built In Anti Katana)",
           "Under Ground Exploit (U can kill enemy and they cant see you)",
@@ -313,9 +313,9 @@ export const games = [
     tags: ["Anime", "Fighting", "Adventure"],
     scripts: [
       {
-        id: "jujutsu-infinite-premium",
-        name: "SolixHub Premium Jujutsu Infinite",
-        description: "Our premium script for Jujutsu Infinite with all features unlocked.",
+        id: "jujutsu-infinite-script",
+        name: "SolixHub Jujutsu Infinite",
+        description: "Our script for Jujutsu Infinite with all features unlocked.",
         features: [
           "Instant Kill Boss at certain percent of health",
           "Auto Join Investigation Teleport world",
@@ -368,9 +368,9 @@ export const games = [
     tags: ["Simulator", "Pets", "Grinding"],
     scripts: [
       {
-        id: "pet-simulator-99-premium",
-        name: "SolixHub Premium Pet Simulator 99",
-        description: "Our premium script for Pet Simulator 99 with all features unlocked.",
+        id: "pet-simulator-99-script",
+        name: "SolixHub Pet Simulator 99",
+        description: "Our script for Pet Simulator 99 with all features unlocked.",
         features: [
           "Auto Tap",
           "Auto Buy New Zone",
@@ -408,9 +408,9 @@ export const games = [
     tags: ["Adventure", "Anime", "Combat"],
     scripts: [
       {
-        id: "demonfall-premium",
-        name: "SolixHub Premium Demonfall",
-        description: "Our premium script for Demonfall with all features unlocked.",
+        id: "demonfall-script",
+        name: "SolixHub Demonfall",
+        description: "Our script for Demonfall with all features unlocked.",
         features: [
           "Auto-Farm for levels and materials",
           "ESP for players, NPCs, and items",
@@ -436,9 +436,9 @@ export const games = [
     tags: ["FPS", "Combat", "Competitive"],
     scripts: [
       {
-        id: "counter-blox-premium",
-        name: "SolixHub Premium Counter Blox",
-        description: "Our premium script for Counter Blox with all features unlocked.",
+        id: "counter-blox-script",
+        name: "SolixHub Counter Blox",
+        description: "Our script for Counter Blox with all features unlocked.",
         features: [
           "Aimbot with customizable settings",
           "ESP for players, weapons, and bombs",
@@ -464,9 +464,9 @@ export const games = [
     tags: ["Adventure", "Anime", "Fighting"],
     scripts: [
       {
-        id: "gpo-premium",
-        name: "SolixHub Premium GPO",
-        description: "Our premium script for Grand Piece Online with all features unlocked.",
+        id: "gpo-script",
+        name: "SolixHub GPO",
+        description: "Our script for Grand Piece Online with all features unlocked.",
         features: [
           "Auto-Farm for levels and resources",
           "ESP for players, NPCs, and items",
@@ -492,9 +492,9 @@ export const games = [
     tags: ["Simulator", "Casual", "Grinding"],
     scripts: [
       {
-        id: "fisch-premium",
-        name: "SolixHub Premium Fisch",
-        description: "Our premium script for Fisch with all features unlocked.",
+        id: "fisch-script",
+        name: "SolixHub Fisch",
+        description: "Our script for Fisch with all features unlocked.",
         features: [
           "Auto-Fishing with customizable settings",
           "Auto-Sell caught fish",

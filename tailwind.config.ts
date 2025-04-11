@@ -57,10 +57,25 @@ const config: Config = {
           800: "#b30044",
           900: "#800031",
         },
-        borderRadius: {
-          lg: "var(--radius)",
-          md: "calc(var(--radius) - 2px)",
-          sm: "calc(var(--radius) - 4px)",
+        purple: {
+          50: "#f5f3ff",
+          100: "#ede9fe",
+          200: "#ddd6fe",
+          300: "#c4b5fd",
+          400: "#a78bfa",
+          500: "#8b5cf6",
+          600: "#7c3aed",
+          700: "#6d28d9",
+          800: "#5b21b6",
+          900: "#4c1d95",
+          950: "#2e1065",
+        },
+        dark: {
+          100: "#1e1e2e",
+          200: "#181825",
+          300: "#11111b",
+          400: "#0d0d14",
+          500: "#09090f",
         },
       },
       animation: {
@@ -97,6 +112,8 @@ const config: Config = {
       boxShadow: {
         glow: "0 0 10px 2px rgba(255, 105, 180, 0.3)",
         "glow-hover": "0 0 15px 5px rgba(255, 105, 180, 0.5)",
+        "purple-glow": "0 0 10px 2px rgba(139, 92, 246, 0.3)",
+        "purple-glow-hover": "0 0 15px 5px rgba(139, 92, 246, 0.5)",
       },
     },
   },

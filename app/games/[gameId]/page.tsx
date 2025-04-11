@@ -55,7 +55,7 @@ export default function GamePage({ params }: GamePageProps) {
   }
 
   return (
-    <div className="py-12">
+    <div className="py-12 bg-white dark:bg-dark-400">
       <div className="container-custom">
         {/* Game Header */}
         <div className="flex flex-col md:flex-row gap-8 mb-12 animate-fade-in">
@@ -64,7 +64,7 @@ export default function GamePage({ params }: GamePageProps) {
           </div>
           <div className="w-full md:w-2/3">
             <h1 className="text-3xl font-bold mb-4 gradient-text">{game.title} Scripts</h1>
-            <p className="text-gray-600 mb-6">{game.description}</p>
+            <p className="text-gray-600 dark:text-gray-300 mb-6">{game.description}</p>
             <div className="flex flex-wrap gap-2 mb-6">
               {game.tags.map((tag, index) => (
                 <span key={tag} className="tag animate-fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
@@ -88,45 +88,6 @@ export default function GamePage({ params }: GamePageProps) {
           </div>
         </div>
 
-        {/* Premium Key Option */}
-        <div className="card p-6 mb-8 animate-fade-in" style={{ animationDelay: "0.2s" }}>
-          <div className="flex flex-col md:flex-row items-center gap-6">
-            <div className="w-full md:w-2/3">
-              <h2 className="text-xl font-bold mb-3 gradient-text">Skip the Key System</h2>
-              <p className="text-gray-600 mb-4">
-                Don't want to go through the key system? Purchase a premium key for instant access without verification
-                steps.
-              </p>
-              <a
-                href="https://solixhub.sellsn.io/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block px-5 py-2 bg-gradient-to-r from-pink-400 to-pink-500 text-white rounded-lg hover:from-pink-500 hover:to-pink-600 transition-colors hover-scale"
-              >
-                Get Premium Keys
-              </a>
-            </div>
-            <div className="w-full md:w-1/3 flex justify-center">
-              <div className="bg-pink-50 p-4 rounded-xl animate-float">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-16 w-16 text-pink-500 mx-auto"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z"
-                  />
-                </svg>
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* Scripts List */}
         <h2 className="text-2xl font-bold mb-6 gradient-text animate-fade-in" style={{ animationDelay: "0.3s" }}>
           Available Scripts
@@ -140,12 +101,12 @@ export default function GamePage({ params }: GamePageProps) {
             >
               <div className="flex flex-col md:flex-row justify-between gap-4">
                 <div className="w-full">
-                  <h3 className="text-xl font-semibold mb-2">{script.name}</h3>
-                  <p className="text-gray-600 mb-4">{script.description}</p>
+                  <h3 className="text-xl font-semibold mb-2 dark:text-gray-200">{script.name}</h3>
+                  <p className="text-gray-600 dark:text-gray-300 mb-4">{script.description}</p>
 
                   {/* Feature List */}
                   <div className="mb-4">
-                    <h4 className="font-medium text-gray-700 mb-2">Features:</h4>
+                    <h4 className="font-medium text-gray-700 dark:text-gray-300 mb-2">Features:</h4>
                     <FeatureList features={script.features} />
                   </div>
 
@@ -196,7 +157,7 @@ export default function GamePage({ params }: GamePageProps) {
                 <div className="flex justify-end mt-2">
                   <button
                     onClick={() => copyScriptById(script.id)}
-                    className="text-pink-500 text-sm font-medium flex items-center hover-scale"
+                    className="text-pink-500 dark:text-purple-400 text-sm font-medium flex items-center hover-scale"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"

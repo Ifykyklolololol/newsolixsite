@@ -46,12 +46,12 @@ export default function ScriptPage({ params }: ScriptPageProps) {
   }
 
   return (
-    <div className="py-12">
+    <div className="py-12 bg-white dark:bg-dark-400">
       <div className="container-custom max-w-4xl">
         <div className="mb-6 animate-slide-up">
           <Link
             href={`/games/${params.gameId}`}
-            className="text-pink-500 hover:text-pink-600 flex items-center hover-scale"
+            className="text-pink-500 dark:text-purple-400 hover:text-pink-600 dark:hover:text-purple-300 flex items-center hover-scale"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -77,61 +77,20 @@ export default function ScriptPage({ params }: ScriptPageProps) {
               ))}
             </div>
           )}
-          <p className="text-gray-600 mb-6">{script.description}</p>
-
-          {/* Premium Key Option */}
-          <div
-            className="bg-gradient-to-r from-pink-50 to-pink-100 rounded-lg p-4 mb-6 animate-fade-in"
-            style={{ animationDelay: "0.1s" }}
-          >
-            <div className="flex flex-col sm:flex-row items-center gap-4">
-              <div className="w-full sm:w-3/4">
-                <h3 className="text-lg font-semibold mb-2">Skip the Key System</h3>
-                <p className="text-gray-600 text-sm mb-3">
-                  Don't want to go through the key system? Purchase a premium key for instant access.
-                </p>
-                <a
-                  href="https://solixhub.sellsn.io/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block px-4 py-2 bg-gradient-to-r from-pink-400 to-pink-500 text-white rounded-lg hover:from-pink-500 hover:to-pink-600 transition-colors text-sm hover-scale"
-                >
-                  Get Premium Keys
-                </a>
-              </div>
-              <div className="w-full sm:w-1/4 flex justify-center">
-                <div className="animate-float">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-12 w-12 text-pink-500"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </div>
+          <p className="text-gray-600 dark:text-gray-300 mb-6">{script.description}</p>
 
           {/* Feature List */}
           <div className="mb-6 animate-fade-in" style={{ animationDelay: "0.2s" }}>
-            <h2 className="text-lg font-semibold mb-3">Features</h2>
+            <h2 className="text-lg font-semibold mb-3 dark:text-gray-200">Features</h2>
             <FeatureList features={script.features} />
           </div>
 
           {script.keyRequired && (
             <div
-              className="bg-amber-50 border border-amber-300 rounded-lg p-4 mb-6 animate-fade-in"
+              className="bg-amber-50 dark:bg-dark-200 border border-amber-300 dark:border-amber-800 rounded-lg p-4 mb-6 animate-fade-in"
               style={{ animationDelay: "0.3s" }}
             >
-              <div className="flex items-center text-amber-700 font-medium mb-2">
+              <div className="flex items-center text-amber-700 dark:text-amber-300 font-medium mb-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-5 w-5 mr-2"
@@ -148,7 +107,7 @@ export default function ScriptPage({ params }: ScriptPageProps) {
                 </svg>
                 <span className="text-base">Key Required</span>
               </div>
-              <p className="text-amber-600">
+              <p className="text-amber-600 dark:text-amber-300">
                 This script requires a key to use. Click the button below to get your free key.
               </p>
               <div className="mt-4">
@@ -161,10 +120,10 @@ export default function ScriptPage({ params }: ScriptPageProps) {
 
           <div className="mb-6 animate-fade-in" style={{ animationDelay: "0.4s" }}>
             <div className="flex justify-between items-center mb-2">
-              <h2 className="text-lg font-semibold">Script Code</h2>
+              <h2 className="text-lg font-semibold dark:text-gray-200">Script Code</h2>
               <button
                 onClick={copyToClipboard}
-                className="text-pink-500 hover:text-pink-600 flex items-center hover-scale"
+                className="text-pink-500 dark:text-purple-400 hover:text-pink-600 dark:hover:text-purple-300 flex items-center hover-scale"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -191,11 +150,11 @@ export default function ScriptPage({ params }: ScriptPageProps) {
           </div>
 
           <div
-            className="bg-gray-50 border border-gray-200 rounded-lg p-4 mb-6 animate-fade-in"
+            className="bg-gray-50 dark:bg-dark-200 border border-gray-200 dark:border-dark-100 rounded-lg p-4 mb-6 animate-fade-in"
             style={{ animationDelay: "0.5s" }}
           >
-            <h2 className="text-lg font-semibold mb-2">How to Use</h2>
-            <ol className="list-decimal list-inside space-y-2 text-gray-700">
+            <h2 className="text-lg font-semibold mb-2 dark:text-gray-200">How to Use</h2>
+            <ol className="list-decimal list-inside space-y-2 text-gray-700 dark:text-gray-300">
               <li className="animate-fade-in" style={{ animationDelay: "0.55s" }}>
                 Copy the loadstring using the "Copy Code" button above.
               </li>

@@ -43,10 +43,13 @@ export default function ScriptModal({ isOpen, onClose, script }: ScriptModalProp
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black bg-opacity-50">
-      <div className="bg-white rounded-xl shadow-xl w-full max-w-4xl max-h-[90vh] flex flex-col">
-        <div className="flex items-center justify-between p-4 border-b border-pink-100">
-          <h3 className="text-xl font-bold">{script.name}</h3>
-          <button onClick={onClose} className="text-gray-500 hover:text-gray-700 focus:outline-none">
+      <div className="bg-white dark:bg-dark-300 rounded-xl shadow-xl w-full max-w-4xl max-h-[90vh] flex flex-col">
+        <div className="flex items-center justify-between p-4 border-b border-pink-100 dark:border-dark-200">
+          <h3 className="text-xl font-bold text-gray-800 dark:text-gray-200">{script.name}</h3>
+          <button
+            onClick={onClose}
+            className="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 focus:outline-none"
+          >
             <X className="h-6 w-6" />
           </button>
         </div>
@@ -57,7 +60,7 @@ export default function ScriptModal({ isOpen, onClose, script }: ScriptModalProp
             </pre>
           </div>
         </div>
-        <div className="p-4 border-t border-pink-100 flex justify-between">
+        <div className="p-4 border-t border-pink-100 dark:border-dark-100 flex justify-between">
           <button onClick={onClose} className="btn-secondary">
             Close
           </button>

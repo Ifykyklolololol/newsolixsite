@@ -3,18 +3,18 @@ import Image from "next/image"
 
 export default function Home() {
   return (
-    <div>
+    <div className="dark:bg-dark-400">
       {/* Hero Section */}
       <section className="gradient-bg py-20 md:py-32">
         <div className="container-custom text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-gray-800 animate-slide-up">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-gray-800 dark:text-gray-200 animate-slide-up">
             Welcome to <span className="gradient-text">SolixHub</span>
           </h1>
           <p
-            className="text-xl md:text-2xl text-gray-600 mb-10 max-w-3xl mx-auto animate-slide-up"
+            className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-10 max-w-3xl mx-auto animate-slide-up"
             style={{ animationDelay: "0.1s" }}
           >
-            Top-Notch Free Scripts for Roblox Exploits - No Paid Options
+            Top-Notch Free Scripts for Roblox Exploits
           </p>
           <div
             className="flex flex-col sm:flex-row justify-center gap-4 animate-slide-up"
@@ -36,35 +36,35 @@ export default function Home() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-10 bg-white">
+      <section className="py-10 bg-white dark:bg-dark-400">
         <div className="container-custom">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center stagger-animation">
             <div className="card p-6 animate-fade-in hover-scale">
-              <h3 className="text-4xl font-bold text-pink-500 mb-2">10,000+</h3>
-              <p className="text-gray-600">Active Users</p>
+              <h3 className="text-4xl font-bold text-pink-500 dark:text-purple-400 mb-2">10,000+</h3>
+              <p className="text-gray-600 dark:text-gray-300">Active Users</p>
             </div>
             <div className="card p-6 animate-fade-in hover-scale">
-              <h3 className="text-4xl font-bold text-pink-500 mb-2">3M+</h3>
-              <p className="text-gray-600">Monthly Executions</p>
+              <h3 className="text-4xl font-bold text-pink-500 dark:text-purple-400 mb-2">3M+</h3>
+              <p className="text-gray-600 dark:text-gray-300">Monthly Executions</p>
             </div>
             <div className="card p-6 animate-fade-in hover-scale">
-              <h3 className="text-4xl font-bold text-pink-500 mb-2">14+</h3>
-              <p className="text-gray-600">Supported Games</p>
+              <h3 className="text-4xl font-bold text-pink-500 dark:text-purple-400 mb-2">14+</h3>
+              <p className="text-gray-600 dark:text-gray-300">Supported Games</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-white dark:bg-dark-400">
         <div className="container-custom">
           <h2 className="section-title text-center gradient-text">Why Choose SolixHub?</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10 stagger-animation">
             <div className="card p-6 text-center animate-fade-in hover-scale">
-              <div className="bg-pink-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 animate-float">
+              <div className="bg-pink-100 dark:bg-dark-200 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 animate-float">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-8 w-8 text-pink-500"
+                  className="h-8 w-8 text-pink-500 dark:text-purple-400"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -72,18 +72,20 @@ export default function Home() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold mb-2">100% Free Scripts</h3>
-              <p className="text-gray-600">All our scripts are completely free to use with a simple free key system.</p>
+              <h3 className="text-xl font-semibold mb-2 dark:text-gray-200">100% Free Scripts</h3>
+              <p className="text-gray-600 dark:text-gray-300">
+                All our scripts are completely free to use with a simple free key system.
+              </p>
             </div>
 
             <div className="card p-6 text-center animate-fade-in hover-scale" style={{ animationDelay: "0.2s" }}>
               <div
-                className="bg-pink-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 animate-float"
+                className="bg-pink-100 dark:bg-dark-200 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 animate-float"
                 style={{ animationDelay: "0.1s" }}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-8 w-8 text-pink-500"
+                  className="h-8 w-8 text-pink-500 dark:text-purple-400"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -91,20 +93,20 @@ export default function Home() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold mb-2">Regular Updates</h3>
-              <p className="text-gray-600">
+              <h3 className="text-xl font-semibold mb-2 dark:text-gray-200">Regular Updates</h3>
+              <p className="text-gray-600 dark:text-gray-300">
                 Our scripts are regularly updated to ensure they work with the latest game versions.
               </p>
             </div>
 
             <div className="card p-6 text-center animate-fade-in hover-scale" style={{ animationDelay: "0.4s" }}>
               <div
-                className="bg-pink-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 animate-float"
+                className="bg-pink-100 dark:bg-dark-200 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 animate-float"
                 style={{ animationDelay: "0.2s" }}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-8 w-8 text-pink-500"
+                  className="h-8 w-8 text-pink-500 dark:text-purple-400"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -117,15 +119,17 @@ export default function Home() {
                   />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold mb-2">Community Support</h3>
-              <p className="text-gray-600">Join our Discord community for support and script requests.</p>
+              <h3 className="text-xl font-semibold mb-2 dark:text-gray-200">Community Support</h3>
+              <p className="text-gray-600 dark:text-gray-300">
+                Join our Discord community for support and script requests.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Popular Games Section */}
-      <section className="py-16 bg-pink-50">
+      <section className="py-16 bg-pink-50 dark:bg-dark-300">
         <div className="container-custom">
           <h2 className="section-title text-center gradient-text">Popular Games</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 stagger-animation">
@@ -139,9 +143,9 @@ export default function Home() {
                   <Image src={game.image || "/placeholder.svg"} alt={game.title} fill className="object-cover" />
                 </div>
                 <div className="p-4">
-                  <h3 className="text-lg font-semibold mb-2">{game.title}</h3>
-                  <p className="text-gray-600 text-sm mb-4">{game.description}</p>
-                  <span className="text-pink-500 text-sm font-medium flex items-center">
+                  <h3 className="text-lg font-semibold mb-2 dark:text-gray-200">{game.title}</h3>
+                  <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">{game.description}</p>
+                  <span className="text-pink-500 dark:text-purple-400 text-sm font-medium flex items-center">
                     View Scripts <span className="arrow-animate ml-1">&rarr;</span>
                   </span>
                 </div>
@@ -156,69 +160,64 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Premium Key Section */}
-      <section className="py-16 bg-white">
+      {/* Key System Section */}
+      <section className="py-16 bg-white dark:bg-dark-400">
         <div className="container-custom">
-          <div className="bg-gradient-to-r from-pink-50 to-pink-100 rounded-2xl p-8 md:p-12 animate-fade-in">
+          <div className="bg-gradient-to-r from-pink-50 to-pink-100 dark:from-dark-300 dark:to-dark-200 rounded-2xl p-8 md:p-12 animate-fade-in">
             <div className="flex flex-col md:flex-row items-center gap-8">
               <div className="w-full md:w-2/3">
-                <h2 className="text-3xl font-bold mb-4 gradient-text">Skip the Key System</h2>
-                <p className="text-lg text-gray-600 mb-6">
-                  Don't want to go through the key system? We offer premium keys that allow you to bypass the key system
-                  entirely.
+                <h2 className="text-3xl font-bold mb-4 gradient-text">Free Key System</h2>
+                <p className="text-lg text-gray-600 dark:text-gray-300 mb-6">
+                  Our key system helps us maintain our servers and continue developing new features while keeping all
+                  scripts completely free for everyone.
                 </p>
                 <ul className="space-y-2 mb-6">
                   <li className="flex items-center">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className="h-5 w-5 mr-2 text-pink-500"
+                      className="h-5 w-5 mr-2 text-pink-500 dark:text-purple-400"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
                     >
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    <span>Instant access to all scripts</span>
+                    <span className="dark:text-gray-300">Simple verification process</span>
                   </li>
                   <li className="flex items-center">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className="h-5 w-5 mr-2 text-pink-500"
+                      className="h-5 w-5 mr-2 text-pink-500 dark:text-purple-400"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
                     >
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    <span>No need to complete verification steps</span>
+                    <span className="dark:text-gray-300">Keys last 24 hours</span>
                   </li>
                   <li className="flex items-center">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className="h-5 w-5 mr-2 text-pink-500"
+                      className="h-5 w-5 mr-2 text-pink-500 dark:text-purple-400"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
                     >
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    <span>Longer key duration (up to permanent)</span>
+                    <span className="dark:text-gray-300">Access to all scripts</span>
                   </li>
                 </ul>
-                <a
-                  href="https://solixhub.sellsn.io/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block px-6 py-3 bg-gradient-to-r from-pink-400 to-pink-500 text-white rounded-lg hover:from-pink-500 hover:to-pink-600 transition-colors hover-scale"
-                >
-                  Get Premium Keys
-                </a>
+                <Link href="/games" className="inline-block btn-primary hover-scale">
+                  Browse Scripts
+                </Link>
               </div>
               <div className="w-full md:w-1/3 flex justify-center">
-                <div className="bg-white p-4 rounded-xl shadow-lg animate-float">
+                <div className="bg-white dark:bg-dark-300 p-4 rounded-xl shadow-lg animate-float">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-24 w-24 text-pink-500 mx-auto"
+                    className="h-24 w-24 text-pink-500 dark:text-purple-400 mx-auto"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -238,11 +237,11 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-white dark:bg-dark-400">
         <div className="container-custom">
-          <div className="bg-gradient-to-r from-pink-50 to-pink-100 rounded-2xl p-8 md:p-12 text-center animate-fade-in">
+          <div className="bg-gradient-to-r from-pink-50 to-pink-100 dark:from-dark-300 dark:to-dark-200 rounded-2xl p-8 md:p-12 text-center animate-fade-in">
             <h2 className="text-3xl font-bold mb-4 gradient-text">Ready to Elevate Your Gameplay?</h2>
-            <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+            <p className="text-lg text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
               Join thousands of players using SolixHub scripts to enhance their Roblox experience.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
